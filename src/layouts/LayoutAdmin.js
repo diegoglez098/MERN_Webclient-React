@@ -1,33 +1,30 @@
-import React from "react"
-import {Route} from 'react-router-dom'
+import React from "react";
+import { Route } from "react-router-dom";
 
 import "./LayoutAdmin.scss";
-import {Layout} from "antd";
+import { Layout } from "antd";
 
-export default function LayoutAdmin(props){
+export default function LayoutAdmin(props) {
+  const { routes } = props;
+  const { Header, Content, Footer } = Layout;
 
-    const {routes} = props;
-    const {Header, Content, Footer} =Layout;
-
-    return (
+  return (
+    <Layout>
+      <h2>Menu Sider Admin</h2>
       <Layout>
-          <h2>Menu Sider Admin</h2>
-          <Layout>
-              <Header>Cabecera...</Header>
-              <Content>
-                 <LoadRouters routes ={routes} />
-              </Content>
-              <Footer>
-                  Diego Gonzalez 2020
-              </Footer>
-          </Layout>
-      </Layout>  
-    );
+        <Header>Cabecera...</Header>
+        <Content>
+          <LoadRouters routes={routes} />
+        </Content>
+        <Footer>Diego Gonzalez 2020</Footer>
+      </Layout>
+    </Layout>
+  );
 }
 
 function LoadRouters({ routes }) {
-    return null;
-/*   return routes.map((route, index) => (
+  return null;
+  /*   return routes.map((route, index) => (
         <Route
         key={index}
         path={route.path}
