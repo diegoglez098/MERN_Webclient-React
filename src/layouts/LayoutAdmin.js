@@ -2,9 +2,7 @@ import React from "react"
 import {Route} from 'react-router-dom'
 
 import "./LayoutAdmin.scss";
-
 import {Layout} from "antd";
-//import routes from "../config/routes";
 
 export default function LayoutAdmin(props){
 
@@ -27,14 +25,15 @@ export default function LayoutAdmin(props){
     );
 }
 
-function LoadRouters ({routes}) {
-    
-    return routes.map((route, index) => (
+function LoadRouters({ routes }) {
+    return null;
+/*   return routes.map((route, index) => (
         <Route
         key={index}
         path={route.path}
         exact={route.exact}
-        component = {route.component}
+        component={route.component}
         />
     ))
+*/
 }
