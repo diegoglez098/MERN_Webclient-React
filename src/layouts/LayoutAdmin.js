@@ -23,14 +23,12 @@ export default function LayoutAdmin(props) {
 }
 
 function LoadRouters({ routes }) {
-  return null;
-  /*   return routes.map((route, index) => (
-        <Route
-        key={index}
-        path={route.path}
-        exact={route.exact}
-        component={route.component}
-        />
-    ))
-*/
+  return routes.map((route, index) => (
+    <Route
+      key={index}
+      path={route.path}
+      exact={route.exact}
+      component={route.component}
+    />
+  ));
 }
